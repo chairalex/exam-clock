@@ -229,6 +229,13 @@ body {
     font-size: 128px;
     font-family: 'Google Sans Code';
     text-align: center;
+    background-color: var(--md-sys-color-on-primary-container);
+    border: 0px;
+    color: var(--md-sys-color-on-primary);
+}
+
+.time_insert_block::placeholder {
+  color: var(--md-sys-color-surface-variant);
 }
 
 .divider_time_insert{
@@ -254,4 +261,29 @@ body {
     padding: 64px;
     border-radius: 16px;
     font-family: 'Google Sans Flex';
+}
+
+.start_end{
+  color: var(--md-sys-color-on-primary-container);
+}
+
+.filled_button{
+  width: 128px;
+  height: 128px;
+  line-height: 0px;
+  --md-icon-size: 64px;
+}
+
+.colon{
+  font-size: 64px;
+  line-height: 0px;
+  color: var(--md-sys-color-on-primary-container);
+  font-family: 'Google Sans Flex';
+}
+
+.back_button{
+  --md-icon-button-icon-size: 40px;
+  position: fixed;
+  top: 64px;
+  left: 64px;
 }
