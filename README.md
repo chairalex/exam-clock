@@ -1,13 +1,15 @@
-# Exam Clock
+# Exam Clock [BETA VERSION]
 
 A clock for examination.
 
 You can enter the start time and end time to show a screen with only the start time and end time.
 
 ## Future Features
-1. An actual clock
-2. Countdown bar
-3. Auto calculate duration
+1. Add old website compatibility
+2. Add alternative font
+3. An actual clock
+4. Countdown bar
+5. Auto calculate duration
 
 ## Developer Notes
 This is my first web tool.
@@ -20,15 +22,17 @@ I just make it with my logic.
 
 If you think somewhere it is too complicated, I‘m sorry about that.
 
-# 考試時鐘
+# 考試時鐘 ［測試版］
 記得考試嘅時候老師會喺黑板寫低開始及結束時間嗎？
 
 呢個嘢就係模擬用嘅
 
 ## 未來功能
-1. 真係會有一個鐘嘅
-2. 倒計時 bar
-3. 自動計算時長
+1. 有啲舊啲嘅網頁嘅兼容性
+2. 備用字體
+3. 真係會有一個鐘嘅
+4. 倒計時 bar
+5. 自動計算時長
 
 ## 關於我
 呢個係我嘅第一個正式自己整嘅 web tool
