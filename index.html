@@ -43,19 +43,33 @@
       </div>
     </md-dialog>
 
-    <div id="inserting_time_session">
+    <md-dialog id="invalid_time">
+      <div slot="headline" style="font-family: 'Google Sans Flex';">
+        Invalid Time
+      </div>
+      <form slot="content" id="form-id" method="dialog" style="font-family: 'Google Sans Flex';">
+        Please enter a valid time.
+      </form>
+      <div slot="actions">
+        <md-text-button form="form-id" style="font-family: 'Google Sans Flex';">Ok</md-text-button>
+      </div>
+    </md-dialog>
+
+    <div id="inserting_time_session" class="inserting_time_session">
       <div class="parent_insert_panel">
-        <h1 class="md-typescale-display-medium-'Google Sans Flex' start_end">Start Time</h1>
+        <md-outlined-text-field label="Subject Name (Optional)" class="subject_name" id="subject_name"></md-outlined-text-field>
+
+        <span class="title_1 start_end">Start Time</span>
         <div class="insert_panel">
             <input class="time_insert_block" id="start_hr" inputmode="numeric" type="text" placeholder="00" maxlength="2">
-            <p class="colon">:</p>
-            <input class="time_insert_block" id="start_sec" inputmode="numeric" type="text" placeholder="00" maxlength="2">
+            <span class="colon">:</span>
+            <input class="time_insert_block" id="start_min" inputmode="numeric" type="text" placeholder="00" maxlength="2">
         </div>
-        <h1 class="md-typescale-display-medium-'Google Sans Flex' start_end">End Time</h1>
+        <span class="title_1 start_end">End Time</span>
         <div class="insert_panel">
             <input class="time_insert_block" id="end_hr" inputmode="numeric" type="text" placeholder="00" maxlength="2">
-            <p class="colon">:</p>
-            <input class="time_insert_block" id="end_sec" inputmode="numeric" type="text" placeholder="00" maxlength="2">
+            <span class="colon">:</span>
+            <input class="time_insert_block" id="end_min" inputmode="numeric" type="text" placeholder="00" maxlength="2">
         </div>
 
         <md-filled-button class="filled_button" id="start_button">
@@ -66,9 +80,29 @@
     </div>
 
     <div id="actual_session">
-      <md-icon-button class="back_button" id="back_button">
-        <md-icon>arrow_back</md-icon>
-      </md-icon-button>
+      
+        <md-icon-button class="back_button" id="back_button">
+          <md-icon>arrow_back</md-icon>
+        </md-icon-button>
+      <div class="testing">
+        <span id="subject_name_display" class="subject_name_display"></span>
+
+        <div class="display_area">
+          <div class="each_time">
+            <span id="showing_start_hr" class="time_display"></span>
+            <span class="colon">:</span>
+            <span id="showing_start_min" class="time_display"></span>
+          </div>
+
+          <span class="dash colon"> – </span>
+
+          <div class="each_time">
+            <span id="showing_end_hr" class="time_display"></span>
+            <span class="colon">:</span>
+            <span id="showing_end_min" class="time_display"></span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

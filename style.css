@@ -248,6 +248,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 16px;
+    align-items: center;
 }
 
 .parent_insert_panel{
@@ -272,11 +273,17 @@ body {
   height: 128px;
   line-height: 0px;
   --md-icon-size: 64px;
+  margin-top: 24px;
+}
+
+.title_1{
+  font-family: 'Google Sans Flex';
+  font-size: 64px;
+  margin-top: 24px;
 }
 
 .colon{
-  font-size: 64px;
-  line-height: 0px;
+  font-size: 80px;
   color: var(--md-sys-color-on-primary-container);
   font-family: 'Google Sans Flex';
 }
@@ -286,4 +293,54 @@ body {
   position: fixed;
   top: 64px;
   left: 64px;
+}
+
+.display_area{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--md-sys-color-primary-container);
+  border-radius: 16px;
+  padding: 64px;
+  align-items: center;
+}
+
+.subject_name{
+  --md-outlined-text-field-input-text-font: 'Google Sans Flex', sans-serif;
+  --md-outlined-text-field-input-text-size: 32px;
+  --md-outlined-text-field-label-text-font: 'Google Sans Flex', sans-serif;
+  --md-outlined-text-field-label-text-size: 16px;
+  width: 512px;
+}
+
+
+.each_time{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.subject_name_display{
+  font-size: 128px;
+  margin-bottom: 32px;
+  font-family: 'Google Sans Flex', sans-serif;
+  color: var(--md-sys-color-on-primary-container);
+
+}
+
+.testing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash{
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.time_display{
+  font-family: 'Google Sans Flex', sans-serif;
+  font-size: 128px;
+  color: var(--md-sys-color-on-primary-container);
 }
