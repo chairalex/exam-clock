@@ -10,9 +10,23 @@ const showing_end_min = document.getElementById('showing_end_min');
 const subject_name_display = document.getElementById('subject_name_display');
 const subject_name = document.getElementById('subject_name');
 const invalid_time = document.getElementById('invalid_time');
+const fullscreen_button = document.getElementById('fullscreen_button');
+const fullscreen_icon = document.getElementById('fullscreen_icon');
 
 actual_session.style.display = 'none';
+fullscreen_icon.textContent = 'fullscreen';
 
+fullscreen_button.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+        fullscreen_icon.textContent = 'fullscreen_exit';
+    } else {
+        document.exitFullscreen();
+        fullscreen_icon.textContent = 'fullscreen';
+    }
+})
 
 start_button.addEventListener('click', (event) => {
     event.preventDefault();
@@ -64,6 +78,14 @@ start_button.addEventListener('click', (event) => {
 
 
 back_button.addEventListener('click', (event) => {
+    event.preventDefault();
+
+
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+        fullscreen_icon.textContent = 'fullscreen';
+    }
+
     inserting_time_session.style.display = 'block';
     actual_session.style.display = 'none';
 });

@@ -295,6 +295,13 @@ body {
   left: 64px;
 }
 
+.fullscreen_button{
+  --md-icon-button-icon-size: 40px;
+  position: fixed;
+  top: 64px;
+  right: 64px;
+}
+
 .display_area{
   display: flex;
   flex-direction: row;
