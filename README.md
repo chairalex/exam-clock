@@ -1,4 +1,5 @@
 # Exam Clock [BETA VERSION]
+> Use a PC for the best experience.
 
 A clock for examination.
 
@@ -23,6 +24,8 @@ I just make it with my logic.
 If you think somewhere it is too complicated, I‘m sorry about that.
 
 # 考試時鐘 ［測試版］
+> 用電腦先可以做到最佳效果
+
 記得考試嘅時候老師會喺黑板寫低開始及結束時間嗎？
 
 呢個嘢就係模擬用嘅
