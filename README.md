@@ -7,10 +7,11 @@ You can enter the start time and end time to show a screen with only the start t
 
 ## Future Features
 1. Add mobile device compatibility
-2. Add alternative font
-3. An actual clock
-4. Countdown bar
-5. Auto calculate duration
+2. Add old browser compatibility
+3. Add alternative font
+4. An actual clock
+5. Countdown bar
+6. Auto calculate duration
 
 ## Developer Notes
 This is my first web tool.
@@ -32,10 +33,11 @@ If you think somewhere it is too complicated, I‘m sorry about that.
 
 ## 未來功能
 1. 改善行動裝置兼容性
-2. 備用字體
-3. 真係會有一個鐘嘅
-4. 倒計時 bar
-5. 自動計算時長
+2. 改善舊瀏覽器兼容性
+3. 備用字體
+4. 真係會有一個鐘嘅
+5. 倒計時 bar
+6. 自動計算時長
 
 ## 關於我
 呢個係我嘅第一個正式自己整嘅 web tool
