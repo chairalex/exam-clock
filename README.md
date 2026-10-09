@@ -6,7 +6,7 @@ A clock for examination.
 You can enter the start time and end time to show a screen with only the start time and end time.
 
 ## Future Features
-1. Add old website compatibility
+1. Add mobile device compatibility
 2. Add alternative font
 3. An actual clock
 4. Countdown bar
@@ -31,7 +31,7 @@ If you think somewhere it is too complicated, I‘m sorry about that.
 呢個嘢就係模擬用嘅
 
 ## 未來功能
-1. 有啲舊啲嘅網頁嘅兼容性
+1. 改善行動裝置兼容性
 2. 備用字體
 3. 真係會有一個鐘嘅
 4. 倒計時 bar
