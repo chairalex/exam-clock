@@ -6,6 +6,8 @@
 
     <script src="main.js" defer></script>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
@@ -33,7 +35,7 @@
   <body>
     <md-dialog id="didnt_filled_in_all_things_dialog">
       <div slot="headline" style="font-family: 'Google Sans Flex';">
-        Dialog title
+        Missing Information
       </div>
       <form slot="content" id="form-id" method="dialog" style="font-family: 'Google Sans Flex';">
         Please fill in both the start time and the end time!
@@ -55,55 +57,76 @@
       </div>
     </md-dialog>
 
-    <div id="inserting_time_session" class="inserting_time_session">
-      <div class="parent_insert_panel">
-        <md-outlined-text-field label="Subject Name (Optional)" class="subject_name" id="subject_name"></md-outlined-text-field>
-
-        <span class="title_1 start_end">Start Time</span>
-        <div class="insert_panel">
-            <input class="time_insert_block" id="start_hr" inputmode="numeric" type="text" placeholder="00" maxlength="2">
-            <span class="colon">:</span>
-            <input class="time_insert_block" id="start_min" inputmode="numeric" type="text" placeholder="00" maxlength="2">
-        </div>
-        <span class="title_1 start_end">End Time</span>
-        <div class="insert_panel">
-            <input class="time_insert_block" id="end_hr" inputmode="numeric" type="text" placeholder="00" maxlength="2">
-            <span class="colon">:</span>
-            <input class="time_insert_block" id="end_min" inputmode="numeric" type="text" placeholder="00" maxlength="2">
-        </div>
-
-        <md-filled-button class="filled_button" id="start_button">
-          <md-icon>play_arrow</md-icon>
-        </md-filled-button>
-
-      </div>
-    </div>
-
-    <div id="actual_session">
-      
-        <md-icon-button class="back_button" id="back_button">
-          <md-icon>arrow_back</md-icon>
-        </md-icon-button>
-
-        <md-icon-button class="fullscreen_button" id="fullscreen_button">
-          <md-icon id="fullscreen_icon"></md-icon>
-        </md-icon-button>
-      <div class="testing">
-        <span id="subject_name_display" class="subject_name_display"></span>
-
-        <div class="display_area">
-          <div class="each_time">
-            <span id="showing_start_hr" class="time_display"></span>
-            <span class="colon">:</span>
-            <span id="showing_start_min" class="time_display"></span>
+    <div id="for_scaling">
+      <div id="inserting_time_session" class="inserting_time_session">
+        <div class="parent_insert_panel">
+          <md-outlined-text-field label="Subject Name (Optional)" class="subject_name" id="subject_name"></md-outlined-text-field>
+          
+          <div class='subject_input_nonmd' id="subject_input_nonmd">
+          <span class="title_2 start_end">Subject Name (Optional)</span>
+          <input class="subject_name subject_name_nonmd" id="subject_input_nonmd_area">
           </div>
 
-          <span class="dash colon"> – </span>
+          <span class="title_1 start_end">Start Time</span>
+          <div class="insert_panel">
+              <input class="time_insert_block" id="start_hr" inputmode="numeric" type="text" placeholder="00" maxlength="2">
+              <span class="colon">:</span>
+              <input class="time_insert_block" id="start_min" inputmode="numeric" type="text" placeholder="00" maxlength="2">
+          </div>
+          <span class="title_1 start_end">End Time</span>
+          <div class="insert_panel">
+              <input class="time_insert_block" id="end_hr" inputmode="numeric" type="text" placeholder="00" maxlength="2">
+              <span class="colon">:</span>
+              <input class="time_insert_block" id="end_min" inputmode="numeric" type="text" placeholder="00" maxlength="2">
+          </div>
 
-          <div class="each_time">
-            <span id="showing_end_hr" class="time_display"></span>
-            <span class="colon">:</span>
-            <span id="showing_end_min" class="time_display"></span>
+          <md-filled-button class="filled_button" id="start_button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px" class="play_icon"><path d="M320-200v-560l440 280-440 280Z"/></svg>
+          </md-filled-button>
+
+          <button class="start_button_nonmd" id="start_button_nonmd">
+            <svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px" class="play_icon"><path d="M320-200v-560l440 280-440 280Z"/></svg>
+          </button>
+
+        </div>
+      </div>
+
+      <div id="actual_session">
+        
+          <md-icon-button class="back_button" id="back_button">
+            <md-icon>arrow_back</md-icon>
+          </md-icon-button>
+
+          <button class="back_button universal_button_nonmd" id="back_button1">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fullscreen_icon"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+          </button>
+
+          <md-icon-button class="fullscreen_button" id="fullscreen_button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fullscreen_icon" id="fullscreen"><path d="M120-120v-200h80v120h120v80H120Zm520 0v-80h120v-120h80v200H640ZM120-640v-200h200v80H200v120h-80Zm640 0v-120H640v-80h200v200h-80Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fullscreen_icon" id="fullscreen_exit"><path d="M240-120v-120H120v-80h200v200h-80Zm400 0v-200h200v80H720v120h-80ZM120-640v-80h120v-120h80v200H120Zm520 0v-200h80v120h120v80H640Z"/></svg>
+          </md-icon-button>
+
+          <button class="fullscreen_button universal_button_nonmd" id="universal_button_nonmd">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fullscreen_icon" id="fullscreen1"><path d="M120-120v-200h80v120h120v80H120Zm520 0v-80h120v-120h80v200H640ZM120-640v-200h200v80H200v120h-80Zm640 0v-120H640v-80h200v200h-80Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fullscreen_icon" id="fullscreen_exit1"><path d="M240-120v-120H120v-80h200v200h-80Zm400 0v-200h200v80H720v120h-80ZM120-640v-80h120v-120h80v200H120Zm520 0v-200h80v120h120v80H640Z"/></svg>
+          </button>
+        <div class="testing">
+          <span id="subject_name_display" class="subject_name_display"></span>
+
+          <div class="display_area">
+            <div class="each_time">
+              <span id="showing_start_hr" class="time_display"></span>
+              <span class="colon">:</span>
+              <span id="showing_start_min" class="time_display"></span>
+            </div>
+
+            <span class="dash colon"> – </span>
+
+            <div class="each_time">
+              <span id="showing_end_hr" class="time_display"></span>
+              <span class="colon">:</span>
+              <span id="showing_end_min" class="time_display"></span>
+            </div>
           </div>
         </div>
       </div>
