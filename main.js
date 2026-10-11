@@ -152,7 +152,7 @@ back_button1.addEventListener('click', () => {
 
 
 
-if (!('customElements' in window && 'attachShadow' in Element.prototype)) {
+if (!('customElements' in window && 'attachShadow' in Element.prototype && 'noModule' in HTMLScriptElement.prototype)) {
     start_button.style.display = 'none';
     subject_name.style.display = 'none';
     fullscreen_button.style.display = 'none';
