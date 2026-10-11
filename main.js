@@ -157,6 +157,13 @@ if (!('customElements' in window && 'attachShadow' in Element.prototype && 'noMo
     subject_name.style.display = 'none';
     fullscreen_button.style.display = 'none';
     back_button.style.display = 'none';
+    didnt_filled_in_all_things_dialog.style.display = 'none';
+    invalid_time.style.display = 'none';
+
+    start_button_nonmd.style.display = 'block';
+    subject_input_nonmd.style.display = 'block';
+    universal_button_nonmd.style.display = 'block';
+    back_button1.style.display = 'block';
 } else {
     start_button_nonmd.style.display = 'none';
     subject_input_nonmd.style.display = 'none';
