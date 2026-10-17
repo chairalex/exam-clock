@@ -20,13 +20,23 @@ const fullscreen_exit1 = document.getElementById('fullscreen_exit1');
 const start_button_nonmd = document.getElementById('start_button_nonmd');
 const subject_input_nonmd = document.getElementById('subject_input_nonmd');
 const subject_input_nonmd_area = document.getElementById('subject_input_nonmd_area');
+const buttons = document.getElementById('buttons');
+const more_options = document.getElementById('more_options');
+const more_options_button = document.getElementById('more_options_button');
 
+
+const timer_millisec = document.getElementById('timer_millisec');
+const timer_sec = document.getElementById('timer_sec');
+const timer_min = document.getElementById('timer_min');
+const timer_hr = document.getElementById('timer_hr');
+let timer_start;
 
 actual_session.style.display = 'none';
 start_button_nonmd.style.display = 'none';
 fullscreen_exit.style.display = 'none';
 fullscreen_exit1.style.display = 'none';
 back_button1.style.display = 'none';
+buttons.style.display = 'none';
 
 window.addEventListener('resize', page_scale_toggling);
 window.addEventListener('load', page_scale_toggling);
@@ -56,6 +66,7 @@ function backing() {
 
     inserting_time_session.style.display = 'block';
     actual_session.style.display = 'none';
+    buttons.style.display = 'none';
 }
 
 function page_scale_toggling() {
@@ -87,6 +98,11 @@ universal_button_nonmd.addEventListener('click', () => {
 start_button.addEventListener('click', (event) => {
     event.preventDefault();
 
+    timer_start = performance.now();
+    setInterval(timer_plus_1, 10)
+    
+
+    
     console.log("Button Clicked")
 
     let start_hr = document.getElementById('start_hr');
@@ -134,6 +150,7 @@ start_button.addEventListener('click', (event) => {
     } else {
         inserting_time_session.style.display = 'none';
         actual_session.style.display = 'block';
+        buttons.style.display = 'block';
     };
 
 });
@@ -225,4 +242,28 @@ start_button_nonmd.addEventListener('click', (event) => {
     };
 
 });
+
+more_options_button.addEventListener('click', (event) => {
+    event.preventDefault();
+    more_options.show();
+    
+});
+
+// timer
+function timer_plus_1() {
+    let current_time = performance.now();
+    let time_difference = current_time - timer_start;
+    console.log(time_difference);
+
+
+    let millisec = Math.floor(time_difference % 1000);
+    let sec = Math.floor((time_difference / 1000) % 60);
+    let min = Math.floor((time_difference / 60000) % 60);
+    let hr = Math.floor(time_difference / 3600000);
+
+    timer_millisec.textContent = String(millisec).padStart(3, '0');
+    timer_sec.textContent = String(sec).padStart(2, '0');
+    timer_min.textContent = String(min).padStart(2, '0');
+    timer_hr.textContent = String(hr).padStart(2, '0');
+};
 

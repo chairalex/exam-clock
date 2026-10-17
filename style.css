@@ -327,6 +327,12 @@ body {
   font-family: 'Google Sans Flex';
 }
 
+.stopwatch_text{
+  font-size: 80px;
+  color: var(--md-sys-color-on-primary-container);
+  font-family: 'Google Sans Code';
+}
+
 .back_button{
   --md-icon-button-icon-size: 40px;
   position: fixed;
@@ -334,12 +340,18 @@ body {
   left: 64px;
 }
 
-.fullscreen_button{
+.right_buttons{
   --md-icon-button-icon-size: 40px;
   position: fixed;
   top: 64px;
   right: 64px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  --md-icon-button-icon-color: var(--md-sys-color-on-primary-container);
 }
+
+
 
 .display_area{
   display: flex;
@@ -374,10 +386,25 @@ body {
 
 }
 
+.boolean_button_text{
+  color: var(--md-sys-color-on-primary-container);
+}
+
 .testing{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: fit-content;
+  gap: 16px;
+}
+
+.stopwatch_box{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:  center;
 }
 
 .dash{
